@@ -1,0 +1,31 @@
+import java.util.Scanner;
+ public class Hello
+{
+      public static int migratoryBirds(int[]a)
+      {
+          int [] birds=new int[a.length];
+          int i;
+          for( i=0;i<a.length;i++)
+          {
+              birds[a[i]]++;
+          }
+          int maxIndex=0,max=-1;
+          if(birds[i]>max)
+          {
+              max=birds[i];
+              maxIndex=i;
+          }
+          return maxIndex;
+      }
+     
+      public static void main(String[]args)
+      {
+          Scanner scan=new Scanner(System.in);
+          int[]a=new int[a.length];
+           a[i] =scan.nextInt();
+          System.out.println(migratoryBirds(a));
+      }
+}
+
+ SAMPLE OUTPUT:
+    2
