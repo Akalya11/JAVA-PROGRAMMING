@@ -1,0 +1,28 @@
+package programs;
+import java.util.Scanner;
+public class Nov9tasks{
+    public static void strongNumber(int N) {
+        int sum = 0;
+        int originalNum = N;
+        while (N > 0) {
+            int digit = N % 10; 
+            int fact = 1;  
+            for (int i = 1; i <= digit; i++) {
+                fact *= i;
+            }
+            sum += fact;
+            N = N / 10;
+        }
+        if (sum == originalNum) {
+            System.out.println("Strong Number");
+        } else {
+            System.out.println("Not Strong Number");
+        }
+    }
+    
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int N = scan.nextInt();
+        strongNumber(N);
+    }
+}
