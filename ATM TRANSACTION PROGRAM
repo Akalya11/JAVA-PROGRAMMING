@@ -1,0 +1,43 @@
+package programs;
+import java.util.Scanner;
+public class AtmTransaction {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int bal=5000,withdrawn,deposit;
+		while(true) {
+			System.out.println("Press 1 for Withdrawn");
+			System.out.println("Press 2 for Deposit");
+			System.out.println("Press 3 for Check Balance");
+			System.out.println("Press 4 for Exit");
+			System.out.println("Choose the Operation you want to Perform:");
+			int res=scan.nextInt();
+			switch(res) {
+			case 1:
+				System.out.println("Enter the money to be withdrawn:");
+				withdrawn=scan.nextInt();
+				if(bal>=withdrawn) {
+					bal=bal-withdrawn;
+					System.out.println("Collect Your Cash!!");
+				}
+				System.out.println("");
+				break;
+			 case 2:
+				 System.out.println("Enter the amount to Deposit:");
+				 deposit=scan.nextInt();
+				 bal=bal+deposit;
+				 System.out.println("");
+				 break;
+			 case 3:
+				 System.out.println("Your balance amount: " +bal);
+				 System.out.println("");
+				 break;
+			 case 4:
+				 System.exit(0);
+				 break;
+				 
+			}
+			
+			}
+		}
+	}
