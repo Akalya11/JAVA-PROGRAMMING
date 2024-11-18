@@ -1,0 +1,19 @@
+package program1;
+import java.util.Scanner;
+public class EvenMultiples {
+	public static void main(String[]args) {
+		Scanner scan=new Scanner(System.in);
+		int N=scan.nextInt();
+		int M=scan.nextInt();
+		for(int i=M;i>=1;i--) {
+			if(i % N == 0 && i % 2== 0) {
+				System.out.print(i + " ");
+			}
+		}
+	}
+}
+
+
+Output:
+4 10
+8 4 
