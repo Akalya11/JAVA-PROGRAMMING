@@ -1,0 +1,26 @@
+package NovTasks;
+import java.util.Scanner;
+public class Day1{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int N=scan.nextInt();
+		int [] arr=new int[N];
+		for(int i=0;i<arr.length;i++) {
+			arr[i]=scan.nextInt();
+		}
+		int A=scan.nextInt();
+		int B=scan.nextInt();
+		long prod=1;
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]%A==0 && arr[i]%B==0)
+			prod=prod*arr[i];
+		}
+		System.out.print(prod);
+	}
+}
+
+Output:
+5
+10 20 30 40 50 
+5 10
+12000000
