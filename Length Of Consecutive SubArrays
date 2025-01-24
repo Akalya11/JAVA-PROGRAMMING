@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Java {
+
+	  public static void LengthOfConsecutiveSubArray(int[] arr,int N)
+	{
+		 int count =1;
+		for(int i=0;i<arr.length-1;i++)
+		{
+			if(arr[i+1]-arr[i] == 1)
+			{
+				count++;
+			}
+			else 
+			{
+					System.out.println(count);
+					count = 1;
+			} 
+		}
+		System.out.println(count);		
+	}
+	
+	public static void main(String[] args) {
+		 Scanner scan = new Scanner(System.in);
+		int N = scan.nextInt();
+		int[] arr= new int[N];
+		for(int i=0;i<arr.length;i++) {
+			arr[i] = scan.nextInt();
+		}
+		LengthOfConsecutiveSubArray(arr,N);
+	}
+}
+
+
+Sample Input:
+4
+1 4 5 7
+
+Sample Output:
+1
+2
+1
